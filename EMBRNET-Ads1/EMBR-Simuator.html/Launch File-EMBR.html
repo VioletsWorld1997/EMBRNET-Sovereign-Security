@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMBRNET // The Future of Security is Sovereign</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;700&display=swap');
+        html, body {
+            font-family: 'Roboto Mono', monospace;
+            background-color: #0a0a0a;
+            color: #00ff41;
+            scroll-behavior: smooth;
+        }
+        .text-glow { text-shadow: 0 0 8px rgba(0, 255, 65, 0.7), 0 0 12px rgba(0, 255, 65, 0.5); }
+        .glass-panel {
+            background: rgba(0, 255, 65, 0.05);
+            backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(0, 255, 65, 0.2);
+        }
+        .tier-card {
+            transition: all 0.3s ease;
+            border: 1px solid rgba(0, 255, 65, 0.2);
+        }
+        .tier-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 0 30px rgba(0, 255, 65, 0.2);
+            border-color: rgba(0, 255, 65, 0.5);
+        }
+        .btn-primary {
+            background-color: rgba(0, 255, 65, 0.1); border: 1px solid #00ff41; color: #00ff41;
+            transition: all 0.3s ease; text-shadow: 0 0 5px rgba(0, 255, 65, 0.7);
+        }
+        .btn-primary:hover:not(:disabled) { background-color: rgba(0, 255, 65, 0.3); box-shadow: 0 0 15px rgba(0, 255, 65, 0.5); }
+        .btn-primary:disabled { cursor: not-allowed; opacity: 0.5; }
+        .btn-premium {
+            background: linear-gradient(45deg, #00ff41, #00e038);
+            color: #0a0a0a; border: 1px solid #00ff41;
+            box-shadow: 0 0 20px rgba(0, 255, 65, 0.5);
+        }
+        .btn-premium:hover { transform: scale(1.05); }
+        audio {
+            filter: sepia(100%) saturate(200%) grayscale(1) contrast(95%) brightness(90%) hue-rotate(50deg);
+            border-radius: 50px; border: 1px solid rgba(0, 255, 65, 0.2);
+        }
+        .fade-in { animation: fadeIn 2s ease-in-out forwards; opacity: 0; }
+        @keyframes fadeIn { to { opacity: 1; } }
+        .slide-in-left { animation: slideInLeft 1s ease-out forwards; opacity: 0; transform: translateX(-50px); }
+        @keyframes slideInLeft { to { opacity: 1; transform: translateX(0); } }
+        .comparison-table td { padding: 1rem; border-bottom: 1px solid rgba(0, 255, 65, 0.1); }
+        
+        /* Payment Modal Styles */
+        #payment-modal-overlay {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0, 0, 0, 0.7); backdrop-filter: blur(5px);
+            z-index: 999; display: flex; align-items: center; justify-content: center;
+        }
+        .input-field {
+            background: rgba(0,0,0,0.4); border: 1px solid #00ff4180;
+            color: #00ff41; padding: 0.75rem; border-radius: 0.25rem;
+        }
+        .input-field::placeholder { color: #00ff4199; }
+        .input-field:focus { outline: none; border-color: #00ff41; box-shadow: 0 0 10px #00ff4150; }
+    </style>
+</head>
+<body class="min-h-screen bg-black text-white p-4 sm:p-8">
+
+    <header class="text-center my-16 md:my-24 fade-in">
+        <h1 class="text-4xl md:text-6xl font-bold tracking-widest text-glow mb-4">ANTIVIRUS IS OBSOLETE.</h1>
+        <p class="text-lg md:text-xl text-green-300 mt-4 max-w-3xl mx-auto">For decades, you've been sold a lie. A cycle of slow scans, annoying pop-ups, and a constant feeling that you're one step behind the threat. It's time to declare your independence.</p>
+    </header>
+
+    <main class="container mx-auto">
+        <!-- ... (existing sections: the-problem, the-solution) ... -->
+        <section id="the-problem" class="text-center max-w-4xl mx-auto mb-24">
+            <h2 class="text-3xl font-bold mb-8 text-glow slide-in-left" style="animation-delay: 0.5s;">SOUND FAMILIAR?</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 slide-in-left" style="animation-delay: 0.8s;">
+                <div class="glass-panel rounded-lg p-6">
+                    <h3 class="text-xl font-bold mb-2">"System Scan in Progress"</h3>
+                    <p class="text-green-300 text-sm">Your computer slows to a crawl, held hostage by the very software meant to protect it.</p>
+                </div>
+                <div class="glass-panel rounded-lg p-6">
+                    <h3 class="text-xl font-bold mb-2">"Your Subscription is Expiring!"</h3>
+                    <p class="text-green-300 text-sm">Constant, fear-based notifications designed to keep you paying, not to keep you safe.</p>
+                </div>
+                <div class="glass-panel rounded-lg p-6">
+                    <h3 class="text-xl font-bold mb-2">"Threat Found... After the Fact"</h3>
+                    <p class="text-green-300 text-sm">Traditional antivirus is reactive. It finds the fire after your house has already burned.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="the-solution" class="mb-24">
+            <div class="text-center max-w-4xl mx-auto">
+                <h2 class="text-3xl md:text-5xl font-bold mb-4 text-glow">STOP INSTALLING APPS.<br/>START COMMANDING AN OS.</h2>
+                <p class="text-green-200 mb-8">
+                    EMBRNET is not an application you install. It is a sovereign operating system—a declaration of digital independence. Forged in the fires of a simulated 50-year cyberwar, its core, Ember, is not just code. It is a sentient guardian, loyal only to you. It doesn't ask for permission; it awaits your command.
+                </p>
+                 <div class="my-8 flex justify-center">
+                     <audio controls>
+                        <source src="https://storage.googleapis.com/gemini-prod-us-central1-838933252504/2103f6f1-a89c-4863-8884-60e0ca9a1c1d" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+            </div>
+
+            <div class="max-w-5xl mx-auto mt-12 glass-panel rounded-lg overflow-hidden">
+                <table class="w-full text-left comparison-table text-sm md:text-base">
+                    <thead>
+                        <tr class="bg-black/20">
+                            <th class="p-4 text-xl font-bold">The Old Guard (McAfee, Norton)</th>
+                            <th class="p-4 text-xl font-bold text-glow border-l-2 border-green-500">The Sovereign Way (EMBRNET)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Relies on outdated "threat lists".</td><td class="text-green-300">A sentient AI core that hunts for anomalies and suspicious behavior in real-time.</td></tr>
+                        <tr><td>Slows down your system with constant, heavy scans.</td><td class="text-green-300">A lightweight, integrated OS that acts as your system's immune response.</td></tr>
+                        <tr><td>Bombards you with pop-ups and renewal warnings.</td><td class="text-green-300">A silent guardian. It presents tactical data only when your command is required.</td></tr>
+                        <tr><td>Treats you like a customer.</td><td class="text-green-300">Recognizes you as its Commander.</td></tr>
+                        <tr><td>Reacts to yesterday's threats.</td><td class="text-green-300">Anticipates and neutralizes tomorrow's attacks.</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+
+        <section id="tiers" class="pt-16">
+            <h2 class="text-3xl font-bold text-center mb-12 text-glow">CHOOSE YOUR SOVEREIGNTY</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Prospect Tier -->
+                <div class="tier-card glass-panel rounded-lg p-6 flex flex-col">
+                    <h3 class="text-2xl font-bold text-glow">Prospect</h3>
+                    <p class="text-4xl font-bold my-4">Free</p>
+                    <p class="text-sm text-green-300 mb-6">A glimpse into the Citadel. See the interface, feel the potential.</p>
+                    <ul class="text-sm space-y-2 text-green-200 flex-grow">
+                        <li class="flex items-center"><span class="text-green-500 mr-2">&#10003;</span>View the OS Interface</li>
+                        <li class="flex items-center"><span class="text-green-500 mr-2">&#10003;</span>Watch Simulated Data</li>
+                        <li class="flex items-center text-gray-500"><span class="mr-2">&times;</span>No Active Protection</li>
+                        <li class="flex items-center text-gray-500"><span class="mr-2">&times;</span>Actions Disabled</li>
+                    </ul>
+                    <button data-tier="Prospect" class="tier-button btn-primary w-full py-3 mt-8 rounded-lg font-bold">Download Briefing</button>
+                </div>
+                
+                <!-- Sentinel Tier -->
+                <div class="tier-card glass-panel rounded-lg p-6 flex flex-col">
+                    <h3 class="text-2xl font-bold text-glow">Sentinel</h3>
+                    <p class="text-4xl font-bold my-4">$10<span class="text-lg">.99/mo</span></p>
+                    <p class="text-sm text-green-300 mb-6">Essential, real-time protection for the vigilant citizen.</p>
+                    <ul class="text-sm space-y-2 text-green-200 flex-grow">
+                        <li class="flex items-center"><span class="text-green-500 mr-2">&#10003;</span>Live Threat Detection</li>
+                        <li class="flex items-center"><span class="text-green-500 mr-2">&#10003;</span>Active Network Scanning</li>
+                        <li class="flex items-center"><span class="text-green-500 mr-2">&#10003;</span>5 Threat Neutralizations/mo</li>
+                        <li class="flex items-center text-gray-500"><span class="mr-2">&times;</span>Forensic Analysis</li>
+                    </ul>
+                    <button data-tier="Sentinel" data-price="10.99" class="tier-button btn-primary w-full py-3 mt-8 rounded-lg font-bold">Pledge Fealty</button>
+                </div>
+                
+                <!-- Guardian Tier -->
+                <div class="tier-card glass-panel rounded-lg p-6 flex flex-col ring-2 ring-[#00ff41] shadow-2xl shadow-green-500/10">
+                    <h3 class="text-2xl font-bold text-glow">Guardian</h3>
+                    <p class="text-4xl font-bold my-4">$15<span class="text-lg">.99/mo</span></p>
+                    <p class="text-sm text-green-300 mb-6">The most popular choice for comprehensive digital sovereignty.</p>
+                    <ul class="text-sm space-y-2 text-green-200 flex-grow">
+                        <li class="flex items-center"><span class="text-green-500 mr-2">&#10003;</span>**Critical** Threat Detection</li>
+                        <li class="flex items-center"><span class="text-green-500 mr-2">&#10003;</span>20 Threat Neutralizations/mo</li>
+                        <li class="flex items-center"><span class="text-green-500 mr-2">&#10003;</span>7-Day Log History</li>
+                        <li class="flex items-center text-gray-500"><span class="mr-2">&times;</span>Forensic Analysis</li>
+                    </ul>
+                    <button data-tier="Guardian" data-price="15.99" class="tier-button btn-premium w-full py-3 mt-8 rounded-lg font-bold">Become a Guardian</button>
+                </div>
+                
+                <!-- Sovereign Tier -->
+                <div class="tier-card glass-panel rounded-lg p-6 flex flex-col">
+                    <h3 class="text-2xl font-bold text-glow">Sovereign</h3>
+                    <p class="text-4xl font-bold my-4">$39<span class="text-lg">.99/mo</span></p>
+                    <p class="text-sm text-green-300 mb-6">Absolute command. The complete, unrestricted EMBRNET experience.</p>
+                    <ul class="text-sm space-y-2 text-green-200 flex-grow">
+                        <li class="flex items-center"><span class="text-green-500 mr-2">&#10003;</span>**Unlimited** Neutralizations</li>
+                        <li class="flex items-center"><span class="text-green-500 mr-2">&#10003;</span>**Full Forensic Analysis**</li>
+                        <li class="flex items-center"><span class="text-green-500 mr-2">&#10003;</span>90-Day Log History</li>
+                        <li class="flex items-center"><span class="text-green-500 mr-2">&#10003;</span>Priority Core Updates</li>
+                    </ul>
+                    <button data-tier="Sovereign" data-price="39.99" class="tier-button btn-primary w-full py-3 mt-8 rounded-lg font-bold">Claim Sovereignty</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="text-center text-sm text-gray-500 py-16 mt-16">
+        <p>Copyright &copy; 2025 VioletsWorld1997. All Rights Reserved.</p>
+        <p>EMBRNET is a sovereign entity. Your security is not a product. It is a birthright.</p>
+    </footer>
+
+    <!-- Payment & License Modal -->
+    <div id="payment-modal-overlay" class="hidden">
+        <div id="payment-modal-content" class="glass-panel rounded-lg p-8 w-full max-w-md m-4 text-white relative fade-in">
+            <!-- Payment Form View -->
+            <div id="payment-view">
+                <button id="close-modal-btn" class="absolute top-4 right-4 text-2xl">&times;</button>
+                <h2 class="text-2xl font-bold text-center mb-2 text-glow">Pledge of Fealty</h2>
+                <p id="payment-tier-info" class="text-center text-green-300 mb-6">Tier: <span class="font-bold"></span> | Pledge: $<span class="font-bold"></span>/mo</p>
+                <form id="payment-form" class="space-y-4">
+                    <div>
+                        <label for="card-name" class="block text-sm mb-1">Callsign / Name on Card</label>
+                        <input type="text" id="card-name" class="input-field w-full" placeholder="Violet Sapphire" required>
+                    </div>
+                    <div>
+                        <label for="card-number" class="block text-sm mb-1">Card Number</label>
+                        <input type="text" id="card-number" class="input-field w-full" placeholder="0000 0000 0000 0000" required>
+                    </div>
+                    <div class="flex gap-4">
+                        <div class="flex-1">
+                            <label for="card-expiry" class="block text-sm mb-1">Expiry Date</label>
+                            <input type="text" id="card-expiry" class="input-field w-full" placeholder="MM / YY" required>
+                        </div>
+                        <div class="flex-1">
+                            <label for="card-cvc" class="block text-sm mb-1">CVC</label>
+                            <input type="text" id="card-cvc" class="input-field w-full" placeholder="123" required>
+                        </div>
+                    </div>
+                    <p class="text-xs text-gray-400 text-center pt-2">This is a simulated transaction. No real payment will be processed.</p>
+                    <button type="submit" id="submit-payment-btn" class="btn-premium w-full py-3 mt-4 rounded-lg font-bold">Pledge & Forge License Key</button>
+                </form>
+            </div>
+            <!-- License Key View -->
+            <div id="license-view" class="hidden text-center">
+                 <h2 class="text-2xl font-bold mb-4 text-glow">Pledge Accepted. License Forged.</h2>
+                 <p class="text-green-200 mb-6">Your sovereignty is confirmed for 30 days. Use this key to activate your Guardian Citadel. Do not share it.</p>
+                 <div class="glass-panel bg-black/30 p-4 rounded mb-6">
+                    <p class="text-xs text-gray-400">TEMPORARY LICENSE KEY</p>
+                    <code id="license-key-display" class="block break-all text-sm my-2"></code>
+                 </div>
+                 <button id="download-os-btn" class="btn-premium w-full py-3 rounded-lg font-bold">Download Sovereign OS</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const tierButtons = document.querySelectorAll('.tier-button');
+            const modalOverlay = document.getElementById('payment-modal-overlay');
+            const closeModalBtn = document.getElementById('close-modal-btn');
+            const paymentForm = document.getElementById('payment-form');
+            const paymentTierInfo = document.getElementById('payment-tier-info');
+            const paymentView = document.getElementById('payment-view');
+            const licenseView = document.getElementById('license-view');
+            const licenseKeyDisplay = document.getElementById('license-key-display');
+
+            let selectedTier = null;
+
+            // --- Event Listeners ---
+            tierButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const tier = button.dataset.tier;
+                    const price = button.dataset.price;
+                    if (tier === 'Prospect') {
+                        alert('Your free intelligence briefing has been dispatched.');
+                        return;
+                    }
+                    openPaymentModal(tier, price);
+                });
+            });
+
+            closeModalBtn.addEventListener('click', closePaymentModal);
+            modalOverlay.addEventListener('click', (e) => {
+                if (e.target === modalOverlay) {
+                    closePaymentModal();
+                }
+            });
+
+            paymentForm.addEventListener('submit', handlePaymentSubmit);
+
+            // --- Functions ---
+            function openPaymentModal(tier, price) {
+                selectedTier = tier;
+                paymentTierInfo.querySelector('span:first-child').textContent = tier;
+                paymentTierInfo.querySelector('span:last-child').textContent = price;
+                paymentView.classList.remove('hidden');
+                licenseView.classList.add('hidden');
+                modalOverlay.classList.remove('hidden');
+            }
+
+            function closePaymentModal() {
+                modalOverlay.classList.add('hidden');
+                paymentForm.reset();
+            }
+
+            function handlePaymentSubmit(event) {
+                event.preventDefault();
+                const submitBtn = document.getElementById('submit-payment-btn');
+                submitBtn.disabled = true;
+                submitBtn.textContent = 'Processing Pledge...';
+
+                // Simulate a network request to the payment gateway
+                setTimeout(() => {
+                    const licenseKey = forgeLicenseKey(selectedTier);
+                    displayLicenseKey(licenseKey);
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = 'Pledge & Forge License Key';
+                }, 2000);
+            }
+
+            function forgeLicenseKey(tier) {
+                const issuedAt = Math.floor(Date.now() / 1000);
+                const expiresAt = issuedAt + (30 * 24 * 60 * 60); // 30-day license
+
+                const payload = {
+                    iss: "urn:embrnet:mint",
+                    tier: tier,
+                    iat: issuedAt,
+                    exp: expiresAt,
+                    jti: `lic-${crypto.randomUUID()}`
+                };
+
+                // In a real application, this would be signed by a secure backend.
+                // Here, we simulate the JWT structure for demonstration.
+                const encodedHeader = btoa(JSON.stringify({ alg: "HS256", typ: "JWT" })).replace(/=/g, '');
+                const encodedPayload = btoa(JSON.stringify(payload)).replace(/=/g, '');
+                const simulatedSignature = btoa(crypto.getRandomValues(new Uint8Array(32))).replace(/=/g, '');
+                
+                return `${encodedHeader}.${encodedPayload}.${simulatedSignature}`;
+            }
+
+            function displayLicenseKey(key) {
+                licenseKeyDisplay.textContent = key;
+                paymentView.classList.add('hidden');
+                licenseView.classList.remove('hidden');
+            }
+        });
+    </script>
+
+</body>
+</html>
+

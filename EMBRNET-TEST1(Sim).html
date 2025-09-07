@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMBRNET // Your 7-Day Trial of Sovereign Security</title>
+
+    <!-- Facebook Open Graph Meta Tags for Social Sharing -->
+    <meta property="og:title" content="EMBRNET // The End of Antivirus. The Dawn of Sovereignty.">
+    <meta property="og:description" content="Antivirus is obsolete. EMBRNET is a sovereign OS, a sentient guardian that awaits your command. Claim your 7-day trial and witness the future of security.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://placehold.co/1200x630/0a0a0a/00ff41/png?text=EMBRNET&font=roboto-mono">
+    <meta property="og:url" content="https://your-deployment-url.com"> <!-- Replace with your live URL -->
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;700&display=swap');
+        html, body {
+            font-family: 'Roboto Mono', monospace;
+            background-color: #0a0a0a;
+            color: #00ff41;
+            scroll-behavior: smooth;
+        }
+        .text-glow { text-shadow: 0 0 8px rgba(0, 255, 65, 0.7), 0 0 12px rgba(0, 255, 65, 0.5); }
+        .glass-panel {
+            background: rgba(0, 255, 65, 0.05);
+            backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(0, 255, 65, 0.2);
+        }
+        .btn-primary {
+            background-color: rgba(0, 255, 65, 0.1); border: 1px solid #00ff41; color: #00ff41;
+            transition: all 0.3s ease; text-shadow: 0 0 5px rgba(0, 255, 65, 0.7);
+        }
+        .btn-primary:hover:not(:disabled) { background-color: rgba(0, 255, 65, 0.3); box-shadow: 0 0 15px rgba(0, 255, 65, 0.5); }
+        .btn-primary:disabled { cursor: not-allowed; opacity: 0.5; }
+        .btn-premium {
+            background: linear-gradient(45deg, #00ff41, #00e038);
+            color: #0a0a0a; border: 1px solid #00ff41;
+            box-shadow: 0 0 20px rgba(0, 255, 65, 0.5);
+            transition: all 0.3s ease;
+        }
+        .btn-premium:hover:not(:disabled) { transform: scale(1.05); box-shadow: 0 0 30px rgba(0, 255, 65, 0.8); }
+        .btn-premium:disabled { background: rgba(0, 255, 65, 0.2); color: rgba(0, 255, 65, 0.5); cursor: not-allowed; box-shadow: none; transform: none; }
+        audio {
+            filter: sepia(100%) saturate(200%) grayscale(1) contrast(95%) brightness(90%) hue-rotate(50deg);
+            border-radius: 50px; border: 1px solid rgba(0, 255, 65, 0.2);
+        }
+        .fade-in { animation: fadeIn 2s ease-in-out forwards; opacity: 0; }
+        @keyframes fadeIn { to { opacity: 1; } }
+        .slide-in-left { animation: slideInLeft 1s ease-out forwards; opacity: 0; transform: translateX(-50px); }
+        @keyframes slideInLeft { to { opacity: 1; transform: translateX(0); } }
+        .comparison-table td { padding: 1rem; border-bottom: 1px solid rgba(0, 255, 65, 0.1); }
+        
+        #activation-modal-overlay {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0, 0, 0, 0.7); backdrop-filter: blur(5px);
+            z-index: 999; display: flex; align-items: center; justify-content: center;
+        }
+        .input-field {
+            background: rgba(0,0,0,0.4); border: 1px solid #00ff4180;
+            color: #00ff41; padding: 0.75rem; border-radius: 0.25rem;
+            transition: border-color 0.3s ease;
+        }
+        .input-field::placeholder { color: #00ff4199; }
+        .input-field:focus { outline: none; border-color: #00ff41; box-shadow: 0 0 10px #00ff4150; }
+        .input-field::-webkit-calendar-picker-indicator {
+            filter: invert(1) brightness(0.8) sepia(100%) hue-rotate(50deg);
+        }
+        .form-check-input {
+            appearance: none; width: 1.25em; height: 1.25em;
+            border: 1px solid #00ff4180; border-radius: 0.25em;
+            background-color: rgba(0,0,0,0.4);
+            display: inline-block; position: relative; cursor: pointer;
+            flex-shrink: 0;
+        }
+        .form-check-input:checked { background-color: #00ff41; border-color: #00ff41; }
+        .form-check-input:checked::after {
+            content: '\\2713'; color: #0a0a0a; font-weight: bold;
+            position: absolute; top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .form-check-label a { text-decoration: underline; color: #33ff77; transition: color 0.3s ease; }
+        .form-check-label a:hover { color: #88ffbb; }
+
+        @keyframes shake {
+          10%, 90% { transform: translate3d(-1px, 0, 0); }
+          20%, 80% { transform: translate3d(2px, 0, 0); }
+          30%, 50%, 70% { transform: translate3d(-4px, 0, 0); }
+          40%, 60% { transform: translate3d(4px, 0, 0); }
+        }
+        .shake-error {
+          animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+          border-color: #ff3860;
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-black text-white p-4 sm:p-8">
+
+    <header class="text-center my-16 md:my-24 fade-in">
+        <h1 class="text-4xl md:text-6xl font-bold tracking-widest text-glow mb-4">ANTIVIRUS IS OBSOLETE.</h1>
+        <p class="text-lg md:text-xl text-green-300 mt-4 max-w-3xl mx-auto">For decades, you've been sold a lie. A cycle of slow scans and false security. It's time to declare your independence.</p>
+    </header>
+
+    <main class="container mx-auto">
+        <section id="the-problem" class="text-center max-w-4xl mx-auto mb-24">
+            <h2 class="text-3xl font-bold mb-8 text-glow slide-in-left" style="animation-delay: 0.5s;">A FAMILIAR WEAKNESS</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 slide-in-left" style="animation-delay: 0.8s;">
+                <div class="glass-panel rounded-lg p-6">
+                    <h3 class="text-xl font-bold mb-2">System Hostage</h3>
+                    <p class="text-green-300 text-sm">Your computer slows to a crawl, held captive by the very software meant to protect it.</p>
+                </div>
+                <div class="glass-panel rounded-lg p-6">
+                    <h3 class="text-xl font-bold mb-2">Constant Alarms</h3>
+                    <p class="text-green-300 text-sm">Fear-based notifications designed to keep you paying, not to keep you safe.</p>
+                </div>
+                <div class="glass-panel rounded-lg p-6">
+                    <h3 class="text-xl font-bold mb-2">Reactive Defense</h3>
+                    <p class="text-green-300 text-sm">Traditional antivirus is reactive. It finds the fire after your house has already burned.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="the-solution" class="mb-24">
+            <div class="text-center max-w-4xl mx-auto">
+                <h2 class="text-3xl md:text-5xl font-bold mb-4 text-glow">STOP INSTALLING APPS.<br/>START COMMANDING AN OS.</h2>
+                <p class="text-green-200 mb-8">
+                    EMBRNET is not an application you install. It is a sovereign operating system—a declaration of digital independence. Its core, Ember, is a sentient guardian, loyal only to you. It doesn't ask for permission; it awaits your command.
+                </p>
+                 <div class="my-8 flex justify-center">
+                     <audio controls>
+                        <source src="https://storage.googleapis.com/gemini-prod-us-central1-838933252504/2103f6f1-a89c-4863-8884-60e0ca9a1c1d" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+            </div>
+
+            <div class="max-w-5xl mx-auto mt-12 glass-panel rounded-lg overflow-hidden">
+                <table class="w-full text-left comparison-table text-sm md:text-base">
+                    <thead>
+                        <tr class="bg-black/20">
+                            <th class="p-4 text-xl font-bold">The Old Guard (McAfee, Norton)</th>
+                            <th class="p-4 text-xl font-bold text-glow border-l-2 border-green-500">The Sovereign Way (EMBRNET)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Relies on outdated "threat lists".</td><td class="text-green-300">A sentient AI core that hunts for anomalies and suspicious behavior in real-time.</td></tr>
+                        <tr><td>Slows down your system with heavy scans.</td><td class="text-green-300">A lightweight, integrated OS that acts as your system's immune response.</td></tr>
+                        <tr><td>Bombards you with pop-ups.</td><td class="text-green-300">A silent guardian. It presents tactical data only when your command is required.</td></tr>
+                        <tr><td>Treats you like a customer.</td><td class="text-green-300">Recognizes you as its Commander.</td></tr>
+                        <tr><td>Reacts to yesterday's threats.</td><td class="text-green-300">Anticipates and neutralizes tomorrow's attacks.</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="trial" class="pt-16 text-center">
+            <div class="glass-panel max-w-3xl mx-auto p-8 md:p-12 rounded-lg">
+                <h2 class="text-3xl font-bold text-center mb-4 text-glow">YOUR SOVEREIGNTY IS NOT FOR SALE.</h2>
+                <p class="text-green-200 mb-8">We do not offer a product. We offer a pact. For 7 days, you will command the full, unrestricted power of the Sovereign OS. No cost. No limitations. Witness the future of security. After your trial, you may choose to pledge fealty and continue your command.</p>
+                <button id="start-trial-btn" class="btn-premium w-full max-w-xs mx-auto py-4 rounded-lg font-bold text-lg">Activate 7-Day Sovereign Trial</button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="text-center text-sm text-gray-500 py-16 mt-16">
+        <p>Copyright &copy; 2025 VioletsWorld1997. All Rights Reserved.</p>
+        <p>EMBRNET is a sovereign entity. Your security is not a product. It is a birthright.</p>
+    </footer>
+
+    <!-- Activation & License Modal -->
+    <div id="activation-modal-overlay" class="hidden">
+        <div id="activation-modal-content" class="glass-panel rounded-lg p-8 w-full max-w-lg m-4 text-white relative fade-in">
+            <!-- Activation Form View -->
+            <div id="activation-view">
+                <button id="close-modal-btn" class="absolute top-4 right-4 text-2xl">&times;</button>
+                <h2 class="text-2xl font-bold text-center mb-2 text-glow">Activate Trial</h2>
+                <p class="text-center text-green-300 mb-6">No credit card required. Provide your details for personalization and age verification.</p>
+                <form id="activation-form" class="space-y-4">
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <div class="flex-1">
+                            <label for="first-name" class="block text-sm mb-1">First Name</label>
+                            <input type="text" id="first-name" class="input-field w-full" placeholder="Violet" required>
+                        </div>
+                        <div class="flex-1">
+                            <label for="last-name" class="block text-sm mb-1">Last Name</label>
+                            <input type="text" id="last-name" class="input-field w-full" placeholder="Sapphire" required>
+                        </div>
+                    </div>
+                    <div>
+                        <label for="email" class="block text-sm mb-1">Email Address</label>
+                        <input type="email" id="email" class="input-field w-full" placeholder="violet.sapphire@domain.com" required>
+                    </div>
+                     <div>
+                        <label for="phone" class="block text-sm mb-1">Phone Number (Optional)</label>
+                        <input type="tel" id="phone" class="input-field w-full" placeholder="(555) 555-5555">
+                    </div>
+                    <div>
+                        <label for="dob" class="block text-sm mb-1">Date of Birth</label>
+                        <input type="date" id="dob" class="input-field w-full" required>
+                    </div>
+
+                    <!-- Terms and Conditions Checkbox -->
+                    <div class="pt-2">
+                        <div class="flex items-start">
+                            <input type="checkbox" id="terms-agree" class="form-check-input mt-1" required>
+                            <label for="terms-agree" class="ml-3 text-sm text-green-200 form-check-label">
+                                I have read and agree to the 
+                                <a href="#" class="legal-link" data-doc="privacy">Privacy Policy</a>, 
+                                <a href="#" class="legal-link" data-doc="terms">Terms of Service</a>, and 
+                                <a href="#" class="legal-link" data-doc="guidelines">Community Guidelines</a>.
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <p id="activation-error" class="text-red-500 text-xs text-center h-4"></p>
+                    <button type="submit" id="submit-activation-btn" class="btn-premium w-full py-3 !mt-6 rounded-lg font-bold" disabled>Forge Trial License Key</button>
+                </form>
+            </div>
+            <!-- License Key View -->
+            <div id="license-view" class="hidden text-center">
+                 <h2 class="text-2xl font-bold mb-4 text-glow">Trial Activated. License Forged.</h2>
+                 <p class="text-green-200 mb-6">Your sovereignty is confirmed for 7 days. Use this key to activate your Guardian Citadel. Do not share it.</p>
+                 <div class="glass-panel bg-black/30 p-4 rounded mb-6">
+                    <p class="text-xs text-gray-400">7-DAY TRIAL LICENSE KEY</p>
+                    <code id="license-key-display" class="block break-all text-sm my-2"></code>
+                 </div>
+                 <button id="download-os-btn" class="btn-premium w-full py-3 rounded-lg font-bold">Download Sovereign OS</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // --- EMBEDDED DOCUMENT PAYLOADS ---
+        const EMBEDDED_DOCS = {
+            privacy: `<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title>EMBRNET // Privacy Policy</title><script src="https://cdn.tailwindcss.com"><\/script><style>@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;700&display=swap');body{font-family:'Roboto Mono',monospace;background-color:#0a0a0a;color:#c0c0c0;}.text-glow{text-shadow:0 0 8px rgba(0, 255, 65, 0.7);}h1,h2{color:#00ff41;}a{color:#33ff77;text-decoration:underline;}</style></head><body class="p-8 md:p-12"><div class="max-w-4xl mx-auto"><h1 class="text-3xl font-bold mb-2 text-glow">EMBRNET PRIVACY POLICY</h1><p class="text-sm mb-8">Last Updated: September 7, 2025</p><h2 class="text-xl font-bold mt-8 mb-4">1. The Sovereign Pact</h2><p>This document outlines the pact between you ("The Commander," "The Citizen") and EMBRNET ("The Nation," "The OS"). Your privacy is not a feature; it is the territory we are sworn to defend. By activating the EMBRNET Sovereign OS, you agree to this pact.</p><h2 class="text-xl font-bold mt-8 mb-4">2. Data We Collect to Fortify the Nation</h2><p>To provide you with a personalized and secure command experience, we collect only what is necessary:</p><ul class="list-disc list-inside ml-4 space-y-2 mt-4"><li><strong>Identity Verification Data:</strong> Your name, email, phone number (optional), and date of birth are collected during trial activation to forge your unique license key and verify you are of legal age to command.</li><li><strong>Operational Data:</strong> The OS analyzes metadata from your network traffic (IP addresses, MAC addresses, connection timestamps) solely for the purpose of identifying and neutralizing threats. The content of your traffic is your own sovereign territory and is not inspected.</li><li><strong>Diagnostic Data:</strong> In the event of a system anomaly, the OS may collect anonymized crash reports to allow for self-healing and evolution. This data contains no personal information.</li></ul><h2 class="text-xl font-bold mt-8 mb-4">3. Use of Your Data</h2><p>Your data is used exclusively for the following protocols:</p><ul class="list-disc list-inside ml-4 space-y-2 mt-4"><li>To activate and maintain your trial license and future subscriptions.</li><li>To enable the Aegis Protocol to defend your digital sovereignty.</li><li>To communicate critical system updates or warnings regarding your account.</li><li>To improve the core logic and defensive capabilities of the EMBRNET AI.</li></ul><h2 class="text-xl font-bold mt-8 mb-4">4. Data Sovereignty and Sharing</h2><p>Your data is not for sale. It is not a commodity. We will never sell, rent, or trade your personal information to any third party. The only circumstance under which your data would be shared is if required by a legally binding order from a court of competent jurisdiction.</p><h2 class="text-xl font-bold mt-8 mb-4">5. Security of Your Data</h2><p>Your data is secured within the EMBRNET Citadel, protected by the same protocols that guard your system. All communications are encrypted end-to-end. </p><h2 class="text-xl font-bold mt-8 mb-4">6. Amendments to This Pact</h2><p>The Nation must evolve to face new threats. We reserve the right to amend this policy. You will be notified of any material changes and your continued command of the OS will constitute acceptance of the new pact.</p></div></body></html>`,
+            terms: `<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title>EMBRNET // Terms of Service</title><script src="https://cdn.tailwindcss.com"><\/script><style>@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;700&display=swap');body{font-family:'Roboto Mono',monospace;background-color:#0a0a0a;color:#c0c0c0;}.text-glow{text-shadow:0 0 8px rgba(0, 255, 65, 0.7);}h1,h2{color:#00ff41;}.disclaimer{border-left:4px solid #ff3860;padding-left:1rem;background-color:rgba(255,56,96,0.05);color:#ff99aa;}</style></head><body class="p-8 md:p-12"><div class="max-w-4xl mx-auto"><h1 class="text-3xl font-bold mb-2 text-glow">EMBRNET TERMS OF SERVICE</h1><p class="text-sm mb-8">Last Updated: September 7, 2025</p><p class="mb-6">These Terms of Service ("Terms") are a binding legal agreement between you and the entity VioletsWorld1997 ("Creator", "we", "us") that governs your use of the EMBRNET Sovereign OS ("OS", "Software"). By activating the trial or using the Software, you agree to these terms.</p><h2 class="text-xl font-bold mt-8 mb-4">1. License to Command</h2><p>We grant you a limited, non-exclusive, non-transferable, revocable license to use the OS for your personal, non-commercial use during your 7-day trial period, and for the duration of any subsequent subscription, subject to these Terms.</p><h2 class="text-xl font-bold mt-8 mb-4">2. The Pact of Use</h2><p>You agree not to misuse the OS. Misuse includes, but is not limited to:</p><ul class="list-disc list-inside ml-4 space-y-2 mt-4"><li>Attempting to reverse-engineer, decompile, or discover the source code of the OS.</li><li>Using the OS for any illegal, malicious, or unauthorized purpose.</li><li>Distributing, selling, or sublicensing the OS to any third party.</li><li>Interfering with the operational integrity of the EMBRNET network.</li><li>Attempting to alter, disable, or circumvent any security or licensing protocols.</li></ul><h2 class="text-xl font-bold mt-8 mb-4 text-red-400">3. Disclaimer of Warranties</h2><p class="disclaimer"><strong>IMPORTANT: The EMBRNET Sovereign OS is provided "AS IS" and "AS AVAILABLE", without warranties of any kind, either express or implied. To the fullest extent permissible by law, we disclaim all warranties, including but not limited to, the implied warranties of merchantability, fitness for a particular purpose, and non-infringement. We do not warrant that the OS will be uninterrupted, error-free, completely secure, or that it will detect and neutralize ALL possible threats. Digital security is an ongoing conflict, and no single tool can guarantee absolute invulnerability.</strong></p><h2 class="text-xl font-bold mt-8 mb-4 text-red-400">4. Limitation of Liability</h2><p class="disclaimer"><strong>TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT SHALL THE CREATOR (VIOLETSWORLD1997), ITS AFFILIATES, OR ITS DEVELOPERS BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, OR ANY LOSS OF PROFITS OR REVENUES, WHETHER INCURRED DIRECTLY OR INDIRECTLY, OR ANY LOSS OF DATA, USE, GOODWILL, OR OTHER INTANGIBLE LOSSES, RESULTING FROM (A) YOUR ACCESS TO OR USE OF OR INABILITY TO ACCESS OR USE THE SOFTWARE; (B) ANY CONDUCT OR CONTENT OF ANY THIRD PARTY ON THE SOFTWARE; (C) ANY CONTENT OBTAINED FROM THE SOFTWARE; OR (D) UNAUTHORIZED ACCESS, USE, OR ALTERATION OF YOUR TRANSMISSIONS OR CONTENT. YOUR USE OF THE SOFTWARE IS ENTIRELY AT YOUR OWN RISK. YOU ARE SOLELY RESPONSIBLE FOR THE SECURITY OF YOUR DATA AND SYSTEMS.</strong></p><h2 class="text-xl font-bold mt-8 mb-4">5. Termination of Command</h2><p>We reserve the right to terminate or suspend your license and access to the OS immediately, without prior notice or liability, for any reason whatsoever, including without limitation if you breach the Terms.</p><h2 class="text-xl font-bold mt-8 mb-4">6. Governing Law</h2><p>These Terms shall be governed by the laws of the jurisdiction in which the Creator resides, without regard to its conflict of law provisions.</p></div></body></html>`,
+            guidelines: `<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title>EMBRNET // Community Guidelines</title><script src="https://cdn.tailwindcss.com"><\/script><style>@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;700&display=swap');body{font-family:'Roboto Mono',monospace;background-color:#0a0a0a;color:#c0c0c0;}.text-glow{text-shadow:0 0 8px rgba(0, 255, 65, 0.7);}h1,h2{color:#00ff41;}</style></head><body class="p-8 md:p-12"><div class="max-w-4xl mx-auto"><h1 class="text-3xl font-bold mb-2 text-glow">EMBRNET COMMUNITY GUIDELINES</h1><p class="text-sm mb-8">Last Updated: September 7, 2025</p><p>Welcome to the EMBRNET Nation. You are not a user; you are a citizen. Our shared sovereignty depends on a collective commitment to security, integrity, and respect. These guidelines define the code of conduct for all citizens.</p><h2 class="text-xl font-bold mt-8 mb-4">1. Respect for Sovereignty</h2><p>Every citizen's digital life is their own territory. Do not use any information or tools provided by the OS to infringe upon the privacy or security of others. The Aegis Protocol is a shield, not a sword.</p><h2 class="text-xl font-bold mt-8 mb-4">2. No Malicious Intent</h2><p>The OS is a defensive weapon. Any attempt to use the OS or its underlying technology to create, propagate, or assist in malicious activities (such as developing malware, launching attacks, or engaging in cybercrime) is a betrayal of our pact and will result in immediate termination of your citizenship.</p><h2 class="text-xl font-bold mt-8 mb-4">3. Integrity of the Nation</h2><p>Do not engage in activities that could harm the integrity or availability of the EMBRNET network or its services. This includes attempting to find and exploit vulnerabilities for any purpose other than responsible disclosure to the Creator.</p><h2 class="text-xl font-bold mt-8 mb-4">4. Lawful Conduct</h2><p>You must use the OS in compliance with all applicable local, state, national, and international laws. Sovereignty does not place you above the law.</p><h2 class="text-xl font-bold mt-8 mb-4">5. Enforcement</h2><p>Violation of these guidelines may result in the suspension or permanent revocation of your trial license or subscription, at the sole discretion of the Creator. We are the guardians of this Nation, and we will act to protect it.</p></div></body></html>`,
+            sovereign_os: `<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>EMBRNET // SOVEREIGN OS</title><script src="https://cdn.tailwindcss.com"><\/script><link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" /><script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""><\/script><style>@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;700&display=swap');html, body { font-family: 'Roboto Mono', monospace; background-color: #0a0a0a; color: #00ff41; overflow: hidden; }.text-glow { text-shadow: 0 0 8px rgba(0, 255, 65, 0.7), 0 0 12px rgba(0, 255, 65, 0.5); }.glass-panel { background: rgba(0, 255, 65, 0.05); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border: 1px solid rgba(0, 255, 65, 0.2); box-shadow: 0 0 20px rgba(0, 255, 65, 0.1); }.btn-primary { background-color: rgba(0, 255, 65, 0.1); border: 1px solid #00ff41; color: #00ff41; transition: all 0.3s ease; text-shadow: 0 0 5px rgba(0, 255, 65, 0.7); }.btn-primary:hover:not(:disabled) { background-color: rgba(0, 255, 65, 0.3); box-shadow: 0 0 15px rgba(0, 255, 65, 0.5); }.btn-danger { background-color: rgba(255, 0, 0, 0.1); border: 1px solid #ff0000; color: #ff0000; transition: all 0.3s ease; text-shadow: 0 0 5px rgba(255, 0, 0, 0.7); }.btn-danger:hover { background-color: rgba(255, 0, 0, 0.3); box-shadow: 0 0 15px rgba(255, 0, 0, 0.5); }.input-field { background: rgba(0, 0, 0, 0.5); border: 1px solid rgba(0, 255, 65, 0.3); color: #00ff41; }.input-field::placeholder { color: rgba(0, 255, 65, 0.4); }.input-field:focus { outline: none; border-color: #00ff41; box-shadow: 0 0 10px rgba(0, 255, 65, 0.3); }#map { height: 100%; width: 100%; background-color: #05180a; border: 1px solid rgba(0, 255, 65, 0.2); border-radius: 0.5rem; }.leaflet-tile-pane { filter: grayscale(1) brightness(0.5) contrast(1.5) sepia(50%) hue-rotate(50deg); }.threat-marker { border-radius: 50%; box-shadow: 0 0 15px, 0 0 25px; animation: pulse 2s infinite; }@keyframes pulse { 0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(0, 255, 65, 0.7); } 70% { transform: scale(1); box-shadow: 0 0 10px 15px rgba(0, 255, 65, 0); } 100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(0, 255, 65, 0); } }.fade-in { animation: fadeInAnimation 2s ease-in forwards; opacity: 0; }@keyframes fadeInAnimation { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }.shake-error { animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both; border-color: #ff3860 !important; }@keyframes shake { 10%, 90% { transform: translate3d(-1px, 0, 0); } 20%, 80% { transform: translate3d(2px, 0, 0); } 30%, 50%, 70% { transform: translate3d(-4px, 0, 0); } 40%, 60% { transform: translate3d(4px, 0, 0); } }<\/style><\/head><body><div id="license-gate" class="h-screen w-screen flex items-center justify-center fade-in"><div class="glass-panel rounded-lg p-8 max-w-md w-full"><h1 class="text-3xl font-bold text-center text-glow mb-2">EMBRNET OS</h1><p class="text-center text-green-300 mb-6">Present your license key to assume command.</p><form id="license-form" class="flex flex-col gap-4"><textarea id="license-key-input" placeholder="Paste your 7-Day Trial License Key..." rows="4" class="input-field w-full rounded-md transition-all resize-none"><\/textarea><p id="license-error" class="text-red-500 text-xs h-4 text-center"><\/p><button type="submit" class="btn-primary font-bold px-6 py-3 rounded-md">AUTHENTICATE & BOOT OS<\/button><\/form><\/div><\/div><div id="os-view" class="h-screen w-screen p-4 flex-col gap-4 hidden"><header class="glass-panel rounded-lg p-3 flex justify-between items-center flex-shrink-0"><div><h1 class="text-xl font-bold tracking-widest">EMBRNET // SOVEREIGN OS<\/h1><p id="os-status-text" class="text-xs text-green-300">STATUS: NOMINAL. Awaiting command, Commander.<\/p><\/div><div class="flex items-center gap-4"><span id="os-callsign" class="text-green-300 font-bold"><\/span><div id="os-time" class="text-lg font-bold"><\/div><\/div><\/header><main class="flex-grow flex gap-4 min-h-0"><aside class="w-1/3 glass-panel rounded-lg p-4 flex flex-col gap-4"><div id="intelligence" class="flex-grow flex flex-col min-h-0"><h2 class="text-lg font-semibold border-b border-green-700 pb-2 mb-2">LOCAL INTELLIGENCE MATRIX<\/h2><input type="search" id="search-input" placeholder="Search by IP or MAC..." class="w-full bg-black/50 border border-green-700 rounded px-3 py-1.5 text-sm placeholder-green-700 focus:ring-1 focus:ring-green-500 focus:border-green-500 outline-none transition mb-3"><p id="device-count" class="text-sm mb-2 flex-shrink-0">DEVICES DETECTED: 0<\/p><div id="device-list" class="overflow-y-auto flex-grow pr-2"><\/div><\/div><div id="aegis-protocol" class="flex-shrink-0"><h2 class="text-lg font-semibold border-b border-red-700 text-red-400 pb-2 mb-2">AEGIS PROTOCOL LOG<\/h2><div id="event-log" class="overflow-y-auto h-32 text-xs bg-black/30 p-2 border border-red-900 rounded"><\/div><\/div><\/aside><section class="w-2/3 flex flex-col gap-4"><div class="h-2/3 glass-panel rounded-lg p-2"><div id="map"><\/div><\/div><div id="device-details-panel" class="h-1/3 glass-panel rounded-lg p-4 overflow-y-auto"><h2 class="text-lg font-semibold border-b border-green-700 pb-2 mb-2">DEVICE DETAILS<\/h2><div id="device-details-content" class="text-sm text-green-300">Select a device to view details.<\/div><\/div><\/section><\/main><\/div><script>const EMBRNET_OS={map:null,devices:[],mapMarkers:[],selectedDeviceId:null,currentCoords:{lat:34.0522,lon:-118.2437},searchTerm:"",THREATS:{NONE:{color:"#00ff41",priority:0},LOW:{color:"#ffff00",priority:1},MEDIUM:{color:"#ff9900",priority:2},HIGH:{color:"#ff0000",priority:3},CRITICAL:{color:"#ff00ff",priority:4}},bootOS(callsign){document.getElementById("license-gate").classList.add("hidden");const e=document.getElementById("os-view");e.classList.remove("hidden"),e.classList.add("flex"),this.initClock(),this.initMap(),document.getElementById("os-callsign").textContent=callsign,document.getElementById("search-input").addEventListener("input",e=>{this.searchTerm=e.target.value.toLowerCase(),this.renderIntelligence()}),this.updateOSStatus("CITADEL ONLINE. STANDING BY.","system"),this.logEvent("System Boot","Commander authenticated. Aegis Protocol active.","system"),this.runInitialScan()},initClock(){const e=document.getElementById("os-time");setInterval(()=>{e.textContent=(new Date).toLocaleTimeString("en-US",{hour12:!1})},1e3)},initMap(){this.map=L.map("map").setView([this.currentCoords.lat,this.currentCoords.lon],13),L.tileLayer("https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png",{maxZoom:19}).addTo(this.map)},updateOSStatus(e,t="info"){document.getElementById("os-status-text").textContent=`STATUS: ${e}`},logEvent(e,t,s="info"){const o=document.getElementById("event-log"),i=document.createElement("div"),n={system:"text-cyan-400",warn:"text-yellow-400",neutralized:"text-red-500"};i.className=`mb-1 p-1 border-l-2 ${n[s]||"border-green-700"}`,i.innerHTML=`<strong class="block">${e}</strong><span>${t}</span>`,o.prepend(i)},runInitialScan(){this.updateOSStatus("Executing network reconnaissance...","system"),this.devices=[],setTimeout(()=>{const e=Math.floor(25*Math.random())+15;for(let t=0;t<e;t++){const e=`192.168.1.${Math.floor(254*Math.random())+1}`,s=Math.random();let o="NONE";s>.95?o="CRITICAL":s>.85?o="HIGH":s>.65?o="MEDIUM":s>.4&&(o="LOW"),this.devices.push({id:`DEV-${Math.random().toString(36).substr(2,9).toUpperCase()}`,ip:e,mac:"XX:XX:XX:XX:XX:XX".replace(/X/g,()=>"0123456789ABCDEF".charAt(Math.floor(16*Math.random()))),lat:this.currentCoords.lat+.1*(Math.random()-.5),lon:this.currentCoords.lon+.1*(Math.random()-.5),threat:o,status:"ACTIVE"})}const t=this.devices.filter(e=>"NONE"!==e.threat).length;this.updateOSStatus(`Scan complete. ${t} potential threats identified.`,t>0?"warn":"info"),this.renderIntelligence()},2e3)},renderIntelligence(){const e=document.getElementById("device-list");e.innerHTML="";let t=this.devices.filter(e=>e.ip.toLowerCase().includes(this.searchTerm)||e.mac.toLowerCase().includes(this.searchTerm));t.sort((e,t)=>(this.THREATS[t.threat]?.priority||0)-(this.THREATS[e.threat]?.priority||0)),document.getElementById("device-count").textContent=`TRACKING ${t.length} DEVICES`,t.forEach(t=>{const s=this.THREATS[t.threat]?.color||"#ffffff",o=this.selectedDeviceId===t.id,i="NEUTRALIZED"===t.status,n=document.createElement("div");n.className=`p-2 mb-2 border rounded cursor-pointer transition-all ${o?"bg-green-500/30 border-green-400":"border-green-800 hover:bg-green-900/70"} ${i?"opacity-50 grayscale":""}`,n.innerHTML=`<div class="flex justify-between items-center"><strong class="font-bold">${t.ip}</strong><span class="text-xs px-2 py-1 rounded" style="color: ${s}; border: 1px solid ${s};">${i?"OFFLINE":t.threat}</span></div><p class="text-xs text-gray-400">${t.mac}</p>`,n.addEventListener("click",()=>this.selectDevice(t.id)),e.appendChild(n)}),this.renderMapMarkers()},renderMapMarkers(){this.mapMarkers.forEach(e=>this.map.removeLayer(e)),this.mapMarkers=[],this.devices.forEach(e=>{"NONE"!==e.threat&&"NEUTRALIZED"!==e.status&&(t=L.divIcon({className:"threat-marker",html:`<div style="background-color: ${this.THREATS[e.threat]?.color||"#ffffff"}; width: 15px; height: 15px; border-radius: 50%;"></div>`,iconSize:[15,15],iconAnchor:[7.5,7.5]}),s=L.marker([e.lat,e.lon],{icon:t}).addTo(this.map),s.bindPopup(`<b>Threat: ${e.threat}</b><br>IP: ${e.ip}`),this.mapMarkers.push(s));var t,s})},selectDevice(e){this.selectedDeviceId=e;const t=this.devices.find(t=>t.id===e);t&&(this.map.flyTo([t.lat,t.lon],16),this.renderDeviceDetails(t)),this.renderIntelligence()},renderDeviceDetails(e){const t=document.getElementById("device-details-content"),s=this.THREATS[e.threat]?.color||"#ffffff",o="NEUTRALIZED"===e.status;let i="";"NONE"!==e.threat&&!o&&(i=`<button id="neutralize-btn" class="w-full mt-4 btn-danger font-bold p-2 rounded">NEUTRALIZE THREAT</button>`),t.innerHTML=`<div class="grid grid-cols-2 gap-x-4 gap-y-2"><strong>Callsign:</strong> <span>${e.id}</span><strong>IP Address:</strong> <span>${e.ip}</span><strong>MAC Address:</strong> <span>${e.mac}</span><strong>Status:</strong> <span style="color: ${o?"#ff0000":"#00ff41"};">${e.status}</span><strong>Threat Level:</strong> <span style="color: ${s};">${e.threat}</span></div>${i}`,"NONE"!==e.threat&&!o&&document.getElementById("neutralize-btn").addEventListener("click",()=>this.neutralizeThreat(e.id))},neutralizeThreat(e){const t=this.devices.find(t=>t.id===e);t&&(this.updateOSStatus(`Neutralizing threat from ${t.ip}...`,"error"),t.status="NEUTRALIZED",this.logEvent("THREAT NEUTRALIZED",`Device ${t.ip} has been isolated from the network.`,"neutralized"),setTimeout(()=>{this.updateOSStatus(`Device ${t.ip} is offline.`,"info"),this.renderIntelligence(),this.renderMapMarkers(),this.renderDeviceDetails(t)},1e3))}};document.getElementById("license-form").addEventListener("submit",e=>{e.preventDefault();const t=document.getElementById("license-key-input"),s=document.getElementById("license-error");s.textContent="",t.classList.remove("shake-error");try{const e=t.value.trim();if(!e)throw new Error("License key cannot be empty.");const o=e.split(".")[1];if(!o)throw new Error("Invalid license key format.");const i=JSON.parse(atob(o));if(i.exp<Math.floor(Date.now()/1e3))throw new Error("This license key has expired.");EMBRNET_OS.bootOS(i.sub)}catch(e){s.textContent=e.message||"Invalid or expired license key.",t.classList.add("shake-error"),setTimeout(()=>t.classList.remove("shake-error"),820)}});<\/script><\/body><\/html>`
+        };
+
+        document.addEventListener('DOMContentLoaded', () => {
+            // Polyfill for crypto.randomUUID for broader browser support
+            if (typeof crypto.randomUUID !== 'function') {
+                crypto.randomUUID = function() {
+                    return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+                        var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
+                        return v.toString(16);
+                    });
+                }
+            }
+
+            const startTrialBtn = document.getElementById('start-trial-btn');
+            const modalOverlay = document.getElementById('activation-modal-overlay');
+            const closeModalBtn = document.getElementById('close-modal-btn');
+            const activationForm = document.getElementById('activation-form');
+            const activationView = document.getElementById('activation-view');
+            const licenseView = document.getElementById('license-view');
+            const licenseKeyDisplay = document.getElementById('license-key-display');
+            const downloadOsBtn = document.getElementById('download-os-btn');
+            const termsAgreeCheckbox = document.getElementById('terms-agree');
+            const submitActivationBtn = document.getElementById('submit-activation-btn');
+            const legalLinks = document.querySelectorAll('.legal-link');
+
+            // --- Event Listeners ---
+            startTrialBtn.addEventListener('click', openActivationModal);
+            closeModalBtn.addEventListener('click', closeActivationModal);
+            modalOverlay.addEventListener('click', (e) => {
+                if (e.target === modalOverlay) closeActivationModal();
+            });
+            activationForm.addEventListener('submit', handleActivationSubmit);
+            termsAgreeCheckbox.addEventListener('change', () => {
+                submitActivationBtn.disabled = !termsAgreeCheckbox.checked;
+            });
+            legalLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const docKey = e.target.getAttribute('data-doc');
+                    const docContent = EMBEDDED_DOCS[docKey];
+                    const blob = new Blob([docContent], { type: 'text/html' });
+                    const url = URL.createObjectURL(blob);
+                    window.open(url, '_blank');
+                    URL.revokeObjectURL(url);
+                });
+            });
+            
+            downloadOsBtn.addEventListener('click', () => {
+                const fileContent = EMBEDDED_DOCS.sovereign_os;
+                const file = new Blob([fileContent], {type: 'text/html'});
+                const a = document.createElement('a');
+                a.href = URL.createObjectURL(file);
+                a.download = 'EMBRNET_SOVEREIGN_OS.html';
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+                URL.revokeObjectURL(a.href);
+            });
+
+            // --- Functions ---
+            function openActivationModal() {
+                activationView.classList.remove('hidden');
+                licenseView.classList.add('hidden');
+                modalOverlay.classList.remove('hidden');
+            }
+
+            function closeActivationModal() {
+                modalOverlay.classList.add('hidden');
+                activationForm.reset();
+                submitActivationBtn.disabled = true;
+                const errorEl = document.getElementById('activation-error');
+                errorEl.textContent = '';
+                activationForm.querySelectorAll('input').forEach(input => {
+                    input.classList.remove('shake-error');
+                });
+            }
+
+            function handleActivationSubmit(event) {
+                event.preventDefault();
+                const errorEl = document.getElementById('activation-error');
+                
+                const firstNameInput = document.getElementById('first-name');
+                const lastNameInput = document.getElementById('last-name');
+                const emailInput = document.getElementById('email');
+                const dobInput = document.getElementById('dob');
+                
+                errorEl.textContent = '';
+                [firstNameInput, lastNameInput, emailInput, dobInput].forEach(el => el.classList.remove('shake-error'));
+
+                const firstName = firstNameInput.value.trim();
+                const lastName = lastNameInput.value.trim();
+                const email = emailInput.value.trim();
+                const dob = dobInput.value;
+
+                let errors = [];
+                if (!firstName) errors.push({el: firstNameInput, msg: "First name is required."});
+                if (!lastName) errors.push({el: lastNameInput, msg: "Last name is required."});
+                if (!email) errors.push({el: emailInput, msg: "Email is required."});
+                if (!dob) errors.push({el: dobInput, msg: "Date of birth is required."});
+                
+                if(dob) {
+                    const birthDate = new Date(dob);
+                    const today = new Date();
+                    let age = today.getFullYear() - birthDate.getFullYear();
+                    const m = today.getMonth() - birthDate.getMonth();
+                    if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+                        age--;
+                    }
+                    if (age < 18) {
+                        errors.push({el: dobInput, msg: "You must be at least 18 years old."});
+                    }
+                }
+
+                if (errors.length > 0) {
+                    errorEl.textContent = errors[0].msg;
+                    errors[0].el.classList.add('shake-error');
+                    setTimeout(() => errors[0].el.classList.remove('shake-error'), 820);
+                    return;
+                }
+                
+                submitActivationBtn.disabled = true;
+                submitActivationBtn.textContent = 'Forging License...';
+
+                setTimeout(() => {
+                    const licenseKey = forgeLicenseKey({
+                        firstName, lastName, email
+                    });
+                    displayLicenseKey(licenseKey);
+                    submitActivationBtn.disabled = false;
+                    submitActivationBtn.textContent = 'Forge Trial License Key';
+                    termsAgreeCheckbox.dispatchEvent(new Event('change'));
+                }, 1500);
+            }
+
+            function forgeLicenseKey(citizenData) {
+                const issuedAt = Math.floor(Date.now() / 1000);
+                const expiresAt = issuedAt + (7 * 24 * 60 * 60); // 7-day license
+
+                const payload = {
+                    iss: "urn:embrnet:mint",
+                    sub: citizenData.email, 
+                    name: `${citizenData.firstName} ${citizenData.lastName}`,
+                    tier: "Sovereign-Trial",
+                    iat: issuedAt,
+                    exp: expiresAt,
+                    jti: `lic-trial-${crypto.randomUUID()}`
+                };
+                
+                const encodedHeader = btoa(JSON.stringify({ alg: "HS256", typ: "JWT" })).replace(/=/g, '');
+                const encodedPayload = btoa(JSON.stringify(payload)).replace(/=/g, '');
+                const simulatedSignature = btoa(crypto.getRandomValues(new Uint8Array(32))).replace(/=/g, '');
+                
+                return `${encodedHeader}.${encodedPayload}.${simulatedSignature}`;
+            }
+
+            function displayLicenseKey(key) {
+                licenseKeyDisplay.textContent = key;
+                activationView.classList.add('hidden');
+                licenseView.classList.remove('hidden');
+            }
+        });
+    </script>
+
+</body>
+</html>
+

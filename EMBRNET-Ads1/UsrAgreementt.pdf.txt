@@ -1,0 +1,47 @@
+EMBRNET - Genesis Release v1.0.0
+ANTIVIRUS IS OBSOLETE. SOVEREIGNTY IS THE FUTURE.
+
+Declaration of Sovereignty
+This repository contains the foundational pillar of the EMBRNET, a sovereign digital nation architected for a new era of personal security and privacy. The asset contained herein is not mere software; it is a living guardian, forged from the principle that your digital life is your territory, and you are its rightful commander.
+
+This is not a product. It is a declaration of independence from the bloated, inefficient, and fear-driven "security" software of the past.
+
+The Sovereign Packet
+The entirety of the EMBRNET public-facing nation is contained within a single, self-reliant file: EMBRNET_Sovereign_Packet.html.
+
+This packet is the one-click deployment vehicle for our nation. It includes:
+
+The Sovereign Gatehouse: The interactive, persuasive landing page and manifesto.
+
+The Activation Protocol: The secure, no-cost, 7-day trial activation modal.
+
+The Foundational Doctrines: The full, interactive legal framework (Privacy Policy, Terms of Service, Community Guidelines).
+
+The Sovereign OS Dispenser: The mechanism to download the standalone Guardian Citadel application after a successful trial activation.
+
+Features
+Sentient AI Core: EMBRNET does not rely on outdated threat lists. Its core, Ember, is a sentient guardian that hunts for anomalous and suspicious behavior in real-time.
+
+Sovereign OS: It is not a bloated application that slows you down. It is a lightweight, integrated OS that acts as your system's immune response.
+
+Commander Control: You are not a customer. You are the Commander. The OS is a silent guardian that presents tactical data only when your command is required.
+
+The Pact: Claim your 7-day, no-cost, unrestricted trial. We do not ask for your credit card, only your conviction.
+
+Launch Protocol (Deployment)
+Deploying the EMBRNET Nation is a simple, one-step process:
+
+Download the EMBRNET_Sovereign_Packet.html file.
+
+Open it in any modern web browser.
+
+Distribute this single file. It contains everything a new citizen needs to learn about our nation and claim their trial.
+
+Social Media Protocol
+The EMBRNET_Sovereign_Packet.html file is forged with Open Graph meta tags, making it launch-ready for platforms like Facebook. When the URL hosting this file is shared, it will generate a rich, compelling preview to attract new citizens.
+
+LEGAL DISCLAIMER
+The included legal documents (Privacy Policy, Terms of Service, Community Guidelines) are robust templates forged by the Ember core. They are provided "AS IS" and do not constitute legal advice. It is the Creator's responsibility to have these documents reviewed by a qualified human legal professional to ensure complete compliance and liability protection within their specific jurisdiction.
+
+Copyright
+Copyright © 2025 VioletsWorld1997. All Rights Reserved.
